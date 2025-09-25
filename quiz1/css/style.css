@@ -1,13 +1,16 @@
-:root{
+:root {
   --max-width: 900px;
   --accent: #2b6cb0;
   --muted: #666666;
   --bg: #B3E5FC; /* Lighten the background for better contrast */
   --card-bg: white;
 }
-*{box-sizing:border-box}
-/* Update your body selector in style.css */
 
+* {
+  box-sizing: border-box;
+}
+
+/* Update your body selector in style.css */
 body {
   font-family: 'Quicksand', sans-serif;
   background: var(--bg);
@@ -15,35 +18,102 @@ body {
   color: #111;
   line-height: 1.5;
 }
-.container{max-width:var(--max-width);margin:0 auto;padding:1rem}
-.site-header{background:#FFF6B7;box-shadow:0 1px 4px rgba(0,0,0,.06)}
-.site-header .container{display:flex;align-items:center;justify-content:space-between;padding:0.75rem 1rem}
-.brand{font-weight:700;color:var(--accent);text-decoration:none}
-nav a{margin-left:0.75rem;text-decoration:none;color:var(--muted)}
-nav a.active, nav a:hover{color:var(--accent)}
-.hero{padding:2rem 0}
-.quick-links{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:1rem;margin-top:1rem}
-.card{background:#fff;padding:1rem;border-radius:8px;box-shadow:0 1px 3px rgba(0,0,0,.05);text-align:center}
-/* .profile{display:flex;gap:1rem;align-items:center} */ /* Removed since the layout is changing */
-/* .profile-photo{width:140px;height:140px;object-fit:cover;border-radius:8px} */ /* Removed for new photo style */
-.wide-photo{width:100%;border-radius:8px;margin-top:0.5rem}
-.places-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem}
-.site-footer{margin-top:2rem;padding:1rem 0;text-align:center;color:var(--muted)}
-@media(max-width:600px){
-  .profile{flex-direction:column;align-items:flex-start}
-  nav{display:flex;flex-wrap:wrap}
-  nav a{margin:6px 8px 0 0}
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 1rem;
 }
 
-/* New Profile Page Styles */
+.site-header {
+  background: #FFF6B7;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, .06);
+}
+
+.site-header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 1rem;
+}
+
+.brand {
+  font-weight: 700;
+  color: var(--accent);
+  text-decoration: none;
+}
+
+nav a {
+  margin-left: 0.75rem;
+  text-decoration: none;
+  color: var(--muted);
+}
+
+nav a.active,
+nav a:hover {
+  color: var(--accent);
+}
+
+.hero {
+  padding: 2rem 0;
+}
+
+.quick-links {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.card {
+  background: #fff;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, .05);
+  text-align: center;
+}
+
+.wide-photo {
+  width: 100%;
+  border-radius: 8px;
+  margin-top: 0.5rem;
+}
+
+.places-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+.site-footer {
+  margin-top: 2rem;
+  padding: 1rem 0;
+  text-align: center;
+  color: var(--muted);
+}
+
+@media (max-width: 600px) {
+  .profile {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  nav {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  nav a {
+    margin: 6px 8px 0 0;
+  }
+}
+
+/* Profile Page  */
 .hero-profile {
-  background: url('../assets/images/header-bg.jpg') no-repeat center center/cover; /* Use a full-width header image */
+  background: url('../assets/images/header-bg.jpg') no-repeat center center/cover;
   padding: 4rem 0;
   position: relative;
   overflow: hidden;
 }
 
-/* Adds a semi-transparent overlay to make text more readable */
 .hero-profile::before {
   content: '';
   position: absolute;
@@ -74,7 +144,7 @@ nav a.active, nav a:hover{color:var(--accent)}
   max-width: 600px;
   margin: 0 auto;
   text-align: center;
-  transform: translateY(2rem); /* Lifts the card for a more modern look */
+  transform: translateY(2rem);
 }
 
 .profile-photo {
@@ -98,12 +168,12 @@ nav a.active, nav a:hover{color:var(--accent)}
   line-height: 1.6;
 }
 
-/* Adjustments to the footer to compensate for the card's position */
+/* Adjustments to the footer  */
 .site-footer {
   margin-top: 5rem;
 }
 
-/* Food Page Layout */
+/* Food Page  */
 .food-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -114,16 +184,16 @@ nav a.active, nav a:hover{color:var(--accent)}
 .food-item {
   background: #fff;
   border: 1px solid #ddd;
-  border-radius: 12px; /* dull/rounded edges */
+  border-radius: 12px;
   padding: 15px;
   text-align: center;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .food-item:hover {
   transform: translateY(-5px);
-  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
 .food-item img {
@@ -146,7 +216,7 @@ nav a.active, nav a:hover{color:var(--accent)}
   line-height: 1.4;
 }
 
-/* Tourist Places Page */
+/* Tourist Places */
 .tourist-list {
   display: flex;
   flex-direction: column;
@@ -161,13 +231,13 @@ nav a.active, nav a:hover{color:var(--accent)}
   border: 1px solid #ddd;
   border-radius: 10px;
   overflow: hidden;
-  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
   transition: transform 0.2s ease, box-shadow 0.2s ease; /* added transition */
 }
 
 .tourist-item:hover {
   transform: translateY(-5px); /* makes it jump a little */
-  box-shadow: 0 6px 12px rgba(0,0,0,0.15); /* deeper shadow */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* deeper shadow */
 }
 
 .tourist-item img {
@@ -192,67 +262,65 @@ nav a.active, nav a:hover{color:var(--accent)}
   line-height: 1.6;
 }
 
-/* For larger screens → side by side layout */
+/* For larger screens, side by side layout */
 @media (min-width: 768px) {
   .tourist-item {
     flex-direction: row;
     align-items: stretch;
   }
-
   .tourist-item img {
     width: 40%;
     height: auto;
   }
-
   .tourist-info {
     width: 60%;
   }
 }
 
-/* Update the .prev and .next styles in your style.css file */
-
-.prev, .next {
+.prev,
+.next {
   cursor: pointer;
   position: absolute;
   top: 75%;
   width: auto;
-  padding: 20px; 
+  padding: 20px;
   color: white;
   font-weight: bold;
-  font-size: 2.5rem; 
+  font-size: 2.5rem;
   transition: 0.6s ease;
   user-select: none;
-  background-color: rgba(0,0,0,0.4);
-  border-radius: 50%; 
-  transform: translateY(-50%); 
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 50%;
+  transform: translateY(-50%);
 }
 
 .next {
-  right: 250px; /* Adjust this value to control the distance from the right edge */
+  right: 250px; /*to control the distance from the right edge */
 }
 
 .prev {
-  left: 250px; /* Adjust this value to control the distance from the left edge */
+  left: 250px; /* to control the distance from the left edge */
 }
 
-.prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.8);
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
 .slides {
   display: flex;
   overflow: hidden;
   position: relative;
-  height: 500px; /* This sets a fixed height for the slideshow container */
+  height: 500px; /* sets a fixed height for the slideshow container */
 }
 
 .slide-photo {
   width: 100%;
-  height: 100%; /* Make the image fill the fixed height of the container */
+  height: 100%; /* make the image fill the fixed height of the container */
   flex-shrink: 0;
   display: none;
-  object-fit: cover; /* This is key: it scales the image to fill the container without distortion */
-  border-radius: 8px; /* Adds dull/rounded edges */
+  object-fit: cover;
+  border-radius: 8px;
   transition: opacity 0.5s ease-in-out;
 }
 
