@@ -2,7 +2,7 @@
   --max-width: 900px;
   --accent: #2b6cb0;
   --muted: #666666;
-  --bg: #B3E5FC; /* Lighten the background for better contrast */
+  --bg: #B3E5FC; 
   --card-bg: white;
 }
 
@@ -10,7 +10,6 @@
   box-sizing: border-box;
 }
 
-/* Update your body selector in style.css */
 body {
   font-family: 'Quicksand', sans-serif;
   background: var(--bg);
@@ -327,3 +326,4 @@ nav a:hover {
 .slide-photo.active {
   display: block;
 }
+
